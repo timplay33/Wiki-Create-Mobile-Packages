@@ -44,6 +44,6 @@ export default defineConfig({
   srcExclude: ["**/README.md"],
 
   sitemap: {
-    hostname: "https://wiki.theidler.de",
+    hostname: "https://wiki.cmp.theidler.de",
   },
 });
