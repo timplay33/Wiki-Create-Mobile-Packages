@@ -11,7 +11,7 @@ collections:
     label: "users"
     folder: "/users"
     create: true
-    slug: "{{path}}/{{slug}}"
+    slug: "{{slug}}"
     path: "{{path}}/{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
@@ -22,7 +22,7 @@ collections:
     label: "developers"
     folder: "/developers"
     create: true
-    slug: "{{path}}/{{slug}}"
+    slug: "{{slug}}"
     path: "{{path}}/{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
