@@ -27,6 +27,10 @@ export default defineConfig({
       ...developers,
     },
 
+    search: {
+      provider: "local"
+    },
+
     socialLinks: [
       {
         icon: "github",
