@@ -1,6 +1,9 @@
 import { defineConfig } from 'vitepress'
-import users from "./sidebars/users";
-import developers from "./sidebars/developers";
+import { generateMultiSidebar } from './utils/generateSidebar'
+import { sidebarConfigs } from './config/sidebar.config'
+
+// Generate dynamic sidebars based on configuration
+const dynamicSidebar = generateMultiSidebar(sidebarConfigs);
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -22,10 +25,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: "Home", link: "/" }],
 
-    sidebar: {
-      ...users,
-      ...developers,
-    },
+    sidebar: dynamicSidebar,
 
     search: {
       provider: "local"
