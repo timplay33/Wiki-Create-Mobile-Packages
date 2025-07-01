@@ -2,7 +2,6 @@ backend:
   name: github
   repo: timplay33/Wiki-Create-Mobile-Packages
   branch: main
-  auth_scope: repo
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
@@ -12,16 +11,20 @@ collections:
     label: "users"
     folder: "/users"
     create: true
-    slug: "{{slug}}"
+    slug: "{{path}}/{{slug}}"
+    path: "{{path}}/{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Path", name: "path", widget: "string", hint: "Specify the subfolder path (e.g., 'guides' or 'tutorials/basics')", default: ""}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "developers"
     label: "developers"
     folder: "/developers"
     create: true
-    slug: "{{slug}}"
+    slug: "{{path}}/{{slug}}"
+    path: "{{path}}/{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Path", name: "path", widget: "string", hint: "Specify the subfolder path (e.g., 'api' or 'guides/advanced')", default: ""}
       - {label: "Body", name: "body", widget: "markdown"}
