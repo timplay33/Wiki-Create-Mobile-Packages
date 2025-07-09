@@ -14,7 +14,7 @@ mc<VERSION>/<TYPE>/<NAME>
 
 For example:
 
-* `mc1.20.1/feature/animated-gearbox`
+* `mc1.20.1/feature/#72`
 * `mc1.20.1/dev`
 * `mc1.20.1/main`
 
@@ -24,10 +24,10 @@ For example:
 | ---------------- | ------------------------------------ | ------------------------------- |
 | `main`           | Stable, released code                | `mc1.20.1/main`                 |
 | `dev`            | Ongoing development                  | `mc1.20.1/dev`                  |
-| `feature/<name>` | New features or experimental ideas   | `mc1.20.1/feature/gearsystem`   |
-| `bugfix/<name>`  | Bug fixes during development         | `mc1.20.1/bugfix/missing-cog`   |
-| `hotfix/<name>`  | Critical fixes for released versions | `mc1.20.1/hotfix/crash-on-load` |
-| `release/<name>` | Prepares a release candidate         | `mc1.20.1/release/v1.2.0`       |
+| `feature/<name>` | New features or experimental ideas   | `mc1.20.1/feature/#72`   |
+| `bugfix/<name>`  | Bug fixes during development         | `mc1.20.1/bugfix/#71`   |
+| `hotfix/<name>`  | Critical fixes for released versions | `mc1.20.1/hotfix/0.5.4` |
+| `release/<name>` | Prepares a release candidate         | `mc1.20.1/release/1.2.0`       |
 
 ---
 
@@ -51,15 +51,15 @@ To simplify working with branches, you can use the provided shell script to **cr
 ### Start a new feature
 
 ```bash
-./gitflow.sh start feature 1.20.1 animated-gears
+./gitflow.sh start feature 1.20.1 "#72"
 ```
 
-Creates and switches to `mc1.20.1/feature/animated-gears` from `mc1.20.1/dev`.
+Creates and switches to `mc1.20.1/feature/#72` from `mc1.20.1/dev`.
 
 ### Finish a feature
 
 ```bash
-./gitflow.sh finish feature 1.20.1 animated-gears
+./gitflow.sh finish feature 1.20.1 "#72"
 ```
 
 Merges it into `mc1.20.1/dev` and deletes the branch.
@@ -69,13 +69,13 @@ Merges it into `mc1.20.1/dev` and deletes the branch.
 ### Start a bugfix
 
 ```bash
-./gitflow.sh start bugfix 1.20.1 fix-render-glitch
+./gitflow.sh start bugfix 1.20.1 "#71"
 ```
 
 ### Finish a bugfix
 
 ```bash
-./gitflow.sh finish bugfix 1.20.1 fix-render-glitch
+./gitflow.sh finish bugfix 1.20.1 "#71"
 ```
 
 ---
@@ -83,13 +83,13 @@ Merges it into `mc1.20.1/dev` and deletes the branch.
 ### Start a release
 
 ```bash
-./gitflow.sh start release 1.20.1 v1.2.0
+./gitflow.sh start release 1.20.1 "1.2.0"
 ```
 
 ### Finish a release
 
 ```bash
-./gitflow.sh finish release 1.20.1 v1.2.0
+./gitflow.sh finish release 1.20.1 "1.2.0"
 ```
 
 Merges into `mc1.20.1/main` and `mc1.20.1/dev`, then deletes the release branch.
@@ -99,13 +99,13 @@ Merges into `mc1.20.1/main` and `mc1.20.1/dev`, then deletes the release branch.
 ### Start a hotfix
 
 ```bash
-./gitflow.sh start hotfix 1.20.1 crash-fix
+./gitflow.sh start hotfix 1.20.1 "0.5.4"
 ```
 
 ### Finish a hotfix
 
 ```bash
-./gitflow.sh finish hotfix 1.20.1 crash-fix
+./gitflow.sh finish hotfix 1.20.1 "0.5.4"
 ```
 
 Merges into `main` and `dev`, then deletes the hotfix branch.
@@ -116,7 +116,7 @@ Merges into `main` and `dev`, then deletes the hotfix branch.
 
 ```bash
 ./gitflow.sh checkout dev 1.20.1
-./gitflow.sh checkout feature 1.20.1 animated-gears
+./gitflow.sh checkout feature 1.20.1 "#72"
 ```
 
 ---
