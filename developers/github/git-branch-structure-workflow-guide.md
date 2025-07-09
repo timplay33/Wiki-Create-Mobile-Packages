@@ -20,20 +20,20 @@ For example:
 
 ## Branch Types
 
-| Branch Type      | Purpose                              | Example                         |
-| ---------------- | ------------------------------------ | ------------------------------- |
-| `main`           | Stable, released code                | `mc1.20.1/main`                 |
-| `dev`            | Ongoing development                  | `mc1.20.1/dev`                  |
+| Branch Type      | Purpose                              | Example                  |
+| ---------------- | ------------------------------------ | ------------------------ |
+| `main`           | Stable, released code                | `mc1.20.1/main`          |
+| `dev`            | Ongoing development                  | `mc1.20.1/dev`           |
 | `feature/<name>` | New features or experimental ideas   | `mc1.20.1/feature/#72`   |
-| `bugfix/<name>`  | Bug fixes during development         | `mc1.20.1/bugfix/#71`   |
-| `hotfix/<name>`  | Critical fixes for released versions | `mc1.20.1/hotfix/0.5.4` |
-| `release/<name>` | Prepares a release candidate         | `mc1.20.1/release/1.2.0`       |
+| `bugfix/<name>`  | Bug fixes during development         | `mc1.20.1/bugfix/#71`    |
+| `hotfix/<name>`  | Critical fixes for released versions | `mc1.20.1/hotfix/0.5.4`  |
+| `release/<name>` | Prepares a release candidate         | `mc1.20.1/release/1.2.0` |
 
----
+- - -
 
 ## Automating Branch Management
 
-To simplify working with branches, you can use the provided shell script to **create**, **merge**, and **delete** branches in the correct structure.
+To simplify working with branches, you can use the shell found in this GitHub gist <https://gist.github.com/timplay33/223149cd9b8beea7d308d70c3102b1d8> to **create**, **merge**, and **delete** branches in the correct structure.
 
 ### Prerequisites
 
@@ -44,7 +44,7 @@ To simplify working with branches, you can use the provided shell script to **cr
   ```
 * Run it from your project directory.
 
----
+- - -
 
 ## Usage Examples
 
@@ -64,7 +64,7 @@ Creates and switches to `mc1.20.1/feature/#72` from `mc1.20.1/dev`.
 
 Merges it into `mc1.20.1/dev` and deletes the branch.
 
----
+- - -
 
 ### Start a bugfix
 
@@ -78,7 +78,7 @@ Merges it into `mc1.20.1/dev` and deletes the branch.
 ./gitflow.sh finish bugfix 1.20.1 "#71"
 ```
 
----
+- - -
 
 ### Start a release
 
@@ -94,7 +94,7 @@ Merges it into `mc1.20.1/dev` and deletes the branch.
 
 Merges into `mc1.20.1/main` and `mc1.20.1/dev`, then deletes the release branch.
 
----
+- - -
 
 ### Start a hotfix
 
@@ -110,7 +110,7 @@ Merges into `mc1.20.1/main` and `mc1.20.1/dev`, then deletes the release branch.
 
 Merges into `main` and `dev`, then deletes the hotfix branch.
 
----
+- - -
 
 ### Switch to a branch
 
@@ -119,7 +119,7 @@ Merges into `main` and `dev`, then deletes the hotfix branch.
 ./gitflow.sh checkout feature 1.20.1 "#72"
 ```
 
----
+- - -
 
 ### Push all branches
 
@@ -129,7 +129,7 @@ Merges into `main` and `dev`, then deletes the hotfix branch.
 
 Pushes all local branches that start with `mc` to the remote.
 
----
+- - -
 
 ## Notes
 
